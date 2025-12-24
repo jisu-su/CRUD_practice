@@ -1,5 +1,5 @@
-# 강사님을 위한 첫 번째 메세지 (Create)
+# Read 차례. 이제는 메세지를 읽어볼 거다
 
-file = open("instructor.txt", "a", encoding="utf-8")
-file.write("공미남 가스라이팅 멈춰주세요")
-file.close()
+file = open("instructor.txt", "r", encoding="utf-8")
+content = file.read()
+print(content)
