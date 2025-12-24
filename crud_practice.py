@@ -1,7 +1,7 @@
-# update. 'a'랑 'w' 둘 다 사용해보자.
-# 'a'는 뒤에 추가하는 방식. append
-# 'w'는 덮어쓰기 write
+# delete 삭제하기
+# 1. 특정 줄만 삭제하기
+# 2. 파일 전체 삭제하기
 
-file = open("instructor.txt","w",encoding="utf-8")
-file.write("공미남 너무 잘 어울려요")
+file = open("instructor.txt","a",encoding="utf-8")
+file.write("\n 특정 줄 삭제를 위한 줄 추가 \n 메리크리스마스")
 file.close()
