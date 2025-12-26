@@ -3,8 +3,11 @@
 # delete부분. 
 # 1. 특정 줄 삭제하기
 
+with open("lyrics.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+
+if len(lines) > 2: # 혹시 줄이 없을 때를 대비한 안전장치
+    del lines[2] 
+
 with open("lyrics.txt", "w", encoding="utf-8") as file:
-    file.write("아무 일 없던 것처럼 이 모든 게 난 다 꿈일 거리고\n")
-    file.write("눈을 다시 감고 떴을 땐 안심하며 꺨 아침이길 바랬어\n")
-    file.write("어긋나 버린 우리 미래에 시간을 거슬러 갈 수 있다면\n")
-    file.write("거칠기보단 따뜻하게 널 부르며 보내줄 수 없을까")
+    file.writelines(lines)  
