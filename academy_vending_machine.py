@@ -1,6 +1,7 @@
 # 1. 자판기 관찰
 # 2. input - 현금, 카드를 먼저 투입한다.
-# pay = input()
+print(f"결제 수단을 현금과 카드 중 선택하세요.")
+pay = input()
 # 3. 입력 창 만들기 - 상품 번호 입력하고 결정 버튼을 누른다. > 버튼화 
 # 아이템 목록 만들기
 products = [
@@ -51,6 +52,7 @@ products = [
 ]
 
 # 고객의 상품 번호 입력
+print(f"구매하실 제품을 번호를 선택해주세요")
 want_number = int(input())
 
 # 아이템_번호_버튼(아이템_목록)
@@ -59,28 +61,30 @@ def product_number_button(products_list):
     for product in products_list:
         # 만약에 고객이 원하는 상품 번호가 아이템 목록 id 숫자와 같은게 있다면
         if want_number == product["id"]:
-            # 선택한 제품의 이름 출력하기
-            print(f"선택하신 제품은 {product["name"]}입니다.")
+            # 선택한 제품의 이름과 가격 출력하기
+            print(f"선택하신 제품은 {product['name']}입니다.")
+            print(f"선택하신 제품의 가격은 {product['price']}원입니다.")
+            
+            payment_process(pay)
 
-product_number_button(products)
-# # 4. 카드면 승인 절차, 현금이면 총합 계산 후 거스름돈
-#             # 결제 시스템 함수
-#             def payment_process(pay):
-#                 # 만약 "현금" 결제라면:
-#                 if pay == "현금":
-#                     # 지불한 현금을 정수로 입력받기
-#                     money = int(input())
-#                     # 일단 합계를 0으로 저장
-#                     total = 0 
-#                     # 고객의 상품 번호에 맞는 가격 가져오기
-#                     # 제품의 가격으로 덮어서 합계 출력
-#                     total = product["price"]
-#                     # 거스름돈
-#                     change = money - total
-#                     print(change)
-#                 # 만약 "카드" 결제라면:
-#                 elif pay == "카드":
-#                     # 고객의 상품 번호에 맞는 가격 가져오기
+# 4. 카드면 승인 절차, 현금이면 총합 계산 후 거스름돈 
+        # 결제 시스템 함수
+        def payment_process(pay):
+            # 만약 "현금" 결제라면:
+            if pay == "현금":
+                # 지불한 현금을 정수로 입력받기
+                money = int(input())
+                # 일단 합계를 0으로 저장
+                total = 0 
+                # 제품의 가격으로 덮어서 합계 출력
+                total = product["price"]
+                # 거스름돈
+                change = money - total
+                # 거스름돈 출력하기
+                print(f"거스름돈은 {change}원입니다.")
+                # 만약 "카드" 결제라면:
+            elif pay == "카드":
+                print(f"{product['price']}원 결제되었습니다.")
 
 
 # 5. 출력 - 사용자가 선택한 제품, 거스름돈
@@ -89,3 +93,6 @@ product_number_button(products)
 # - 사용자가 원하는 물건을 적는다.
 # - 판매자가 확인하다.
 # - 가능한 것들을 추가하고, 뺄 것들은 뺀다.
+
+# 함수 한 번에 호출하기
+product_number_button(products)
