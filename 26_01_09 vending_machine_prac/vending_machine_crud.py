@@ -16,7 +16,6 @@ def read_sugestion():
         print(f"건의사항 {idx}번. {sugestion}")
 
 # 6-3. update
-# Update (수정)
 # 판매자가 건의 사항을 확인해서 직접 제품을 추가한다.
 def add_product(products):
     # 새로운 제품을 직접 입력해서
@@ -35,5 +34,11 @@ def add_product(products):
     products.append(new_product)
     print("제품이 추가되었습니다!")
 
-
 # 6-4. delete
+def delete_sugestion(sugestion_box):
+    # 제품이 추가된 건의 사항은 게시판에서 삭제하기
+        for idx, sugestion in enumerate(sugestion_board):
+            # 삭제할 번호를 입력한다
+            delete_sugestion_idx = int(input())
+            sugestion.pop(delete_sugestion_idx)
+            break
