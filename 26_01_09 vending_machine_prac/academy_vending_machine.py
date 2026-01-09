@@ -1,3 +1,5 @@
+# 모듈화 연결
+from vending_machine_crud import create_suggestion, read_suggestion, delete_suggestion, add_product
 # 1. 자판기 관찰
 # 2. input - 현금, 카드를 먼저 투입한다.
 print(f"결제 수단을 현금과 카드 중 선택하세요.")
