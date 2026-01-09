@@ -93,10 +93,13 @@ def product_number_button(products_list):
 
 
 # 6. 추가적인 CRUD  - 자판기 건의함
-# - 이미 정해져 있는 제품들
-# - 사용자가 원하는 물건을 적는다.
-# - 판매자가 확인하다.
-# - 가능한 것들을 추가하고, 뺄 것들은 뺀다.
+# 6-1. create
+
+# 6-2. read
+
+# 6-3. update
+
+# 6-4. delete
 
 # 함수 한 번에 호출하기
 product_number_button(products)
