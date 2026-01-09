@@ -56,9 +56,14 @@ want_number = int(input())
 # 아이템_번호_버튼(아이템_목록)
 def product_number_button(products_list):
     for product in products:
-        if want_number == products
-
+        if want_number == products["id"]:
 # 4. 카드면 승인 절차, 현금이면 총합 계산 후 거스름돈
+            def payment_process(pay):
+                if pay == "현금":
+                    money = int(input())
+                    total = 0 + products["price"]
+                    change = money - total
+                    print(change)
 # 5. 출력 - 사용자가 선택한 제품, 거스름돈
 # 6. 추가적인 CRUD  - 자판기 건의함
 # - 이미 정해져 있는 제품들
