@@ -93,12 +93,19 @@ def product_number_button(products_list):
 
 
 # 6. 추가적인 CRUD  - 자판기 건의함
+# 건의 사항 게시판
+sugestion_board = []
 # 6-1. create
 
 # 6-2. read
+def read_sugestion():
+    # 건의 사항 게시판을 글을 확인한다.
+    for idx, sugestion in enumerate(sugestion_board):
+        print(f"건의사항 {idx}번. {sugestion}")
 
 # 6-3. update
-
+def add_product(products):
+    
 # 6-4. delete
 
 # 함수 한 번에 호출하기
