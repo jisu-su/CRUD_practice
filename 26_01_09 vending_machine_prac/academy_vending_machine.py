@@ -89,8 +89,7 @@ def product_number_button(products_list):
                 print(f"{product['price']}원 결제되었습니다.")
             # 결제한 제품 받기
             print(f"선택하신 {product['name']}이 나왔습니다. 감사합니다.")
-    else:
-        print(f"선택하신 번호에 제품이 없습니다.")
+            return
 
 # 함수 한 번에 호출하기
 product_number_button(products)
