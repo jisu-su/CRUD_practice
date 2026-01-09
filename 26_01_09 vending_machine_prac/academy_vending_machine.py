@@ -74,6 +74,7 @@ def product_number_button(products_list):
             # 만약 "현금" 결제라면:
             if pay == "현금":
                 # 지불한 현금을 정수로 입력받기
+                print("투입할 금액을 입력하세요:")
                 money = int(input())
                 # 일단 합계를 0으로 저장
                 total = 0 
