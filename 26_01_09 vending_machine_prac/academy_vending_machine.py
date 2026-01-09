@@ -66,7 +66,7 @@ def product_number_button(products_list):
             print(f"선택하신 제품의 가격은 {product['price']}원입니다.")
             payment_process(pay)
 
-# 4. 카드면 승인 절차, 현금이면 총합 계산 후 거스름돈 
+# 4. 카드면 승인 절차, 현금이면 총합 계산 + 5. 거스름돈, 제품 출력
         # 결제 시스템 함수
         def payment_process(pay):
             # 만약 "현금" 결제라면:
@@ -89,17 +89,17 @@ def product_number_button(products_list):
     else:
         print(f"선택하신 번호에 제품이 없습니다.")
 
-# 5. 출력 - 사용자가 선택한 제품, 거스름돈
-
-
 # 6. 추가적인 CRUD  - 자판기 건의함
+# >> 일단 함수로 만들어 보고 클래스로 묶어보기.
+# 건의 사항 게시판 만들기
+sugestion_board = []
 # 6-1. create
+def create_sugestion():
+    # 사용자가 건의 내용을 입력한다.
+    sugestion = input()
+    # 건의함 목록에 추가 된다.
+    sugestion_board.append(sugestion)
 
-# 6-2. read
-
-# 6-3. update
-
-# 6-4. delete
 
 # 함수 한 번에 호출하기
 product_number_button(products)
